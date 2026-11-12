@@ -1,0 +1,27 @@
+{
+  "name": "t3-orchestra",
+  "private": true,
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,magenta \"pnpm --filter @t3-orchestra/server dev\" \"pnpm --filter @t3-orchestra/web dev\"",
+    "dev:fake": "cross-env T3ORCHESTRA_FAKE_T3=1 pnpm dev",
+    "build": "pnpm --filter @t3-orchestra/web build && pnpm --filter @t3-orchestra/server build",
+    "start": "pnpm --filter @t3-orchestra/server start",
+    "test": "vitest run",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @t3-orchestra/server db:generate"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "concurrently": "^10.0.6",
+    "cross-env": "^10.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
