@@ -1,0 +1,1 @@
+ALTER TABLE `boards` ADD `run_config` text;
