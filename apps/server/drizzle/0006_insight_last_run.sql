@@ -1,0 +1,1 @@
+ALTER TABLE `insight_chats` ADD `last_t3_run_id` text;
