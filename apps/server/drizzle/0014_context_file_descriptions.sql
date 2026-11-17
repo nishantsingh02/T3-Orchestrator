@@ -1,0 +1,1 @@
+ALTER TABLE `context_files` ADD `description` text;
