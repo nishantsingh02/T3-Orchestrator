@@ -9,8 +9,6 @@ T3 Orchestra never runs agents itself: everything goes through the `t3` CLI of a
 > **Status:** early and experimental. Built and tested on Windows only; the macOS and Linux code paths exist but
 > haven't been run. This is an independent project, not affiliated with T3 Code or its authors.
 
-![The board: tasks move from Backlog through Running, Needs Input and AI Review to Human Review and Done](docs/screenshots/board.png)
-
 ## Requirements
 
 - Node 22+ and pnpm 10
@@ -39,22 +37,6 @@ Production:
 pnpm build            # web → apps/web/dist, server → apps/server/dist
 pnpm start            # serves the API and the web app on http://127.0.0.1:4417 and opens the browser
 ```
-
-## Screenshots
-
-From a demo project on `pnpm dev:fake`.
-
-**A plan to review before anything runs**: tasks with milestones, dependencies and the paths each one touches.
-
-![Plan review: the proposed tasks with milestone, category, complexity, priority, dependencies and paths](docs/screenshots/plan.png)
-
-**Roadmap**: milestones in the order auto-run works through them, each with its progress and a finish estimate.
-
-![Roadmap: three milestones with progress bars and their tasks](docs/screenshots/roadmap.png)
-
-**Overview**: where the board stands, the pace, what holds work back and what needs you.
-
-![Overview: progress by column, pace, scope, tasks done per day, blocked tasks and what needs you](docs/screenshots/overview.png)
 
 ## Using it
 
