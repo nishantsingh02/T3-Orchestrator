@@ -69,7 +69,7 @@ function ConnectionDot() {
       {health.data?.fake && (
         <Tip content="The server is using the scripted fake T3 client (T3ORCHESTRA_FAKE_T3=1). No real agents run.">
           <Badge variant="outline" size="sm">
-            Fake T3 mode
+            Test T3 mode
           </Badge>
         </Tip>
       )}
