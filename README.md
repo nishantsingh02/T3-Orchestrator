@@ -1,8 +1,8 @@
-# T3 Orchestra
+# T3 Orchestrator
 
-T3 Orchestra is a local Kanban board for [T3 Code](https://t3.codes). You write one goal, a planner agent splits it into tasks, and each task runs as a T3 Code thread in its own git worktree. It tracks tasks through a board, runs an AI review and fix loop, tells you when an agent needs input, and ends with your review and merge.
+T3 Orchestrator is a local Kanban board for [T3 Code](https://t3.codes). You write one goal, a planner agent splits it into tasks, and each task runs as a T3 Code thread in its own git worktree. It tracks tasks through a board, runs an AI review and fix loop, tells you when an agent needs input, and ends with your review and merge.
 
-T3 Orchestra does not run agents itself. It drives the `t3` CLI of a running T3 Code desktop app.
+T3 Orchestrator does not run agents itself. It drives the `t3` CLI of a running T3 Code desktop app.
 
 Status: early and experimental. Built and tested on Windows only. Not affiliated with T3 Code or its authors.
 
@@ -21,7 +21,7 @@ Status: early and experimental. Built and tested on Windows only. Not affiliated
 
 - Node 22+ and pnpm 10
 - git
-- T3 Code desktop app running. T3 Orchestra talks to it through the `t3` CLI; on Windows that is `~/.t3/bin/t3.cmd`.
+- T3 Code desktop app running. T3 Orchestrator talks to it through the `t3` CLI; on Windows that is `~/.t3/bin/t3.cmd`.
 
 ## Run locally
 
@@ -34,7 +34,7 @@ pnpm install
 ### Without real agents (recommended first)
 
 ```sh
-pnpm dev:fake
+pnpm dev:try
 ```
 
 Open http://localhost:5173. This uses a scripted fake T3 client. It creates real git worktrees and commits, but no real model runs. Its data is kept separately in `%APPDATA%\t3orchestra-fake` (or `~/.t3orchestra-fake`).
