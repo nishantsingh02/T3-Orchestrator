@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "concurrently -k -n server,web -c blue,magenta \"pnpm --filter @t3-orchestra/server dev\" \"pnpm --filter @t3-orchestra/web dev\"",
-    "dev:fake": "cross-env T3ORCHESTRA_FAKE_T3=1 pnpm dev",
+    "dev:try": "cross-env T3ORCHESTRA_FAKE_T3=1 pnpm dev",
     "build": "pnpm --filter @t3-orchestra/web build && pnpm --filter @t3-orchestra/server build",
     "start": "pnpm --filter @t3-orchestra/server start",
     "test": "vitest run",
